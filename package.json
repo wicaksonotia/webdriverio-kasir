@@ -4,9 +4,10 @@
   "description": "WebdriverIO Project to run Kasir app regression tests",
   "scripts": {
     "android.app": "wdio config/wdio.android.app.conf.ts",
-    "allure": "allure generate ./reports/allure-results && allure open",
+    "allure": "allure generate allure-results --clean && allure open",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint config tests"
+    "lint": "eslint config tests",
+    "show-allure": "allure server allure-result"
   },
   "repository": {
     "type": "git",

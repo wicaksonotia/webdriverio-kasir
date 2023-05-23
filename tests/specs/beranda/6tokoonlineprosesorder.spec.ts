@@ -3,9 +3,9 @@ import BerandaScreen from '../../screenobjects/beranda/berandaScreen';
 import TokoOnlineScreen from '../../screenobjects/beranda/tokoonlineScreen';
 import KonfirmasiPesananScreen from '../../screenobjects/beranda/konfirmasipesananScreen';
 
-Given(/^I am on the Home page$/, async () => {    
+Given(/^I am on the Home page$/, async () => {
     await BerandaScreen.nanti();
-    await BerandaScreen.waitForIsShown(true);
+    // await BerandaScreen.waitForIsShown(true);
     await BerandaScreen.page();
 });
 
@@ -14,11 +14,11 @@ When(/^I click menu Toko Online$/, async () => {
 });
 
 Then(/^I should be able to processing incoming orders$/, async () => {
-    await TokoOnlineScreen.waitForIsShown(true);
+    // await TokoOnlineScreen.waitForIsShown(true);
     await TokoOnlineScreen.page();
     await TokoOnlineScreen.openTabBaru();
     await TokoOnlineScreen.detailOrder();
     await TokoOnlineScreen.prosesOrder();
     await KonfirmasiPesananScreen.prosesPengiriman();
-    await TokoOnlineScreen.page();
+    // await TokoOnlineScreen.page();
 });

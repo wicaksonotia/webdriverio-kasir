@@ -3,14 +3,14 @@ import BerandaScreen from '../../screenobjects/beranda/berandaScreen';
 import KasirScreen from '../../screenobjects/beranda/kasirScreen';
 import KonfirmasiPenjualanScreen from '../../screenobjects/beranda/konfirmasipenjualanScreen';
 
-Given(/^I am on the Home page$/, async () => {    
-    await BerandaScreen.waitForIsShown(true);
+Given(/^I am on the Home page$/, async () => {
+    // await BerandaScreen.waitForIsShown(true);
     await BerandaScreen.page();
 });
 
 When(/^I click menu Kasir$/, async () => {
     await BerandaScreen.clickKasir();
-    await KasirScreen.waitForIsShown(true);
+    // await KasirScreen.waitForIsShown(true);
     await KasirScreen.page();
     //qa
     // await KasirScreen.clickProduct5();

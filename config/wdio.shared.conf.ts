@@ -127,13 +127,13 @@ export const config: WebdriverIO.Config = {
         //     jsonFolder: './reports/cucumberjs-json/json',
         //     language: 'en',
         // }],
-        // ['allure', {
-        //     outputDir: './allure-results',
-        //     disableWebdriverStepsReporting: false,
-        //     disableWebdriverScreenshotsReporting: false,
-        //     useCucumberStepReporter: false,
-        //     addConsoleLogs: true,
-        // }],
+        ['allure', {
+            outputDir: './allure-results',
+            disableWebdriverStepsReporting: false,
+            disableWebdriverScreenshotsReporting: false,
+            useCucumberStepReporter: true,
+            addConsoleLogs: true,
+        }],
         [video, {
             outputDir: './reports/video',
             saveAllVideos: true,        // If true, also saves videos for successful test cases
@@ -156,12 +156,12 @@ export const config: WebdriverIO.Config = {
     // Specify Test Files
     // ==================
     specs: [
-        './tests/features/beranda/3createnewproduct.feature' // unset 'appium:noReset': true
+        // './tests/features/beranda/3createnewproduct.feature' // unset 'appium:noReset': true
         // './tests/features/beranda/1cekkuponnonrokok.feature'
-        // './tests/features/beranda/2cekpotongannonrokok.feature' 
+        // './tests/features/beranda/2cekpotongannonrokok.feature'
         // './tests/features/beranda/4createorderoffline.feature'
         // './tests/features/beranda/5tokoonlineordermasuk.feature'
-        // './tests/features/beranda/6tokoonlineprosesorder.feature'
+        './tests/features/beranda/6tokoonlineprosesorder.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -172,13 +172,14 @@ export const config: WebdriverIO.Config = {
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
         // <string[]> (file/dir) require files before executing features
+        // require:['./tests/specs/beranda/*.spec.ts']
         require: [
-            './tests/specs/beranda/3createnewproduct.spec.ts'
+            // './tests/specs/beranda/3createnewproduct.spec.ts'
             // './tests/specs/beranda/1cekkuponnonrokok.spec.ts'
             // './tests/specs/beranda/2cekpotongannonrokok.spec.ts'
             // './tests/specs/beranda/4createorderoffline.spec.ts'
             // './tests/specs/beranda/5tokoonlineordermasuk.spec.ts'
-            // './tests/specs/beranda/6tokoonlineprosesorder.spec.ts'
+            './tests/specs/beranda/6tokoonlineprosesorder.spec.ts'
         ],
         // <boolean> show full backtrace for errors
         backtrace: false,
