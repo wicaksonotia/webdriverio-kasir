@@ -42,7 +42,7 @@ config.capabilities = [
         //version 2.23
         // Read the reset strategies very well, they differ per platform, see
         // http://appium.io/docs/en/writing-running-appium/other/reset-strategies/
-        // 'appium:noReset': true,
+        'appium:noReset': true,
         // 'appium:fullReset': true, //false
         'appium:newCommandTimeout': 240,
         // 'autoGrantPermissions': true,

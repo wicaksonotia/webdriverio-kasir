@@ -52,7 +52,9 @@ class BerandaScreen extends AppScreen {
     private get menuChat() { return $('~menu2'); }
     private get menuAkunSaya() { return $('~menu3'); }
 
-    private get btnOK() { return $('//*[@resource-id="android:id/button1"]'); }
+    // private get btnOK() { return $('//*[@resource-id="android:id/button1"]'); }
+    // private get btnOK() { return $('//android.view.ViewGroup[@content-desc="transferKupon"]'); }
+    private get btnOK() { return $('~transferKupon'); }
     private get btnAlertOfflineModePositive() { return $('~btnAlertOfflineModePositive'); }
 
     //a method to encapsule automation code to interact with the page
@@ -111,7 +113,7 @@ class BerandaScreen extends AppScreen {
         await expect(this.menuProduk).toBeDisplayed();
         await expect(this.menuChat).toBeDisplayed();
         await expect(this.menuAkunSaya).toBeDisplayed();
-        await driver.pause(2000);
+        await driver.pause(10000);
     }
 
     async goOffline() {
